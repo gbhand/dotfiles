@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# ensure script is sourced
+if ! (return 0 2>/dev/null); then
+    echo "Error: script must be sourced"
+    echo 
+    echo "      run '. $0' or 'source $0'"
+    exit 1
+fi
+
 ext="sh"
 arch="$(arch)"
 case "$(uname -s)" in
